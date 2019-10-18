@@ -658,7 +658,6 @@
                     $interval.cancel(downloadTaskRefreshPromise);
                     return;
                 }
-
                 refreshDownloadTask(true);
             }, ariaNgSettingService.getDownloadTaskRefreshInterval());
         }

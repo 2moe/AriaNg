@@ -365,14 +365,20 @@
         });
 
         aria2TaskService.onTaskCompleted(function (event) {
+            var file_to_play = ariaNgSettingService.getAudioNotification();
+            if(file_to_play) {
+                new Audio(angular.extend('audio/' + file_to_play + '.mp3')).play();
+            }
             ariaNgLocalizationService.notifyTaskComplete(event.task);
         });
 
         aria2TaskService.onBtTaskCompleted(function (event) {
+            console.log('complete 2')
             ariaNgLocalizationService.notifyBtTaskComplete(event.task);
         });
 
         aria2TaskService.onTaskErrorOccur(function (event) {
+            console.log('complete 3')
             ariaNgLocalizationService.notifyTaskError(event.task);
         });
 

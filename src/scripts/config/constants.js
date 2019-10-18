@@ -1,7 +1,7 @@
 (function () {
     'use strict';
-
-    angular.module('ariaNg').constant('ariaNgConstants', {
+  angular.module('ariaNg')
+    .constant('ariaNgConstants', {
         title: 'AriaNg',
         appPrefix: 'AriaNg',
         optionStorageKey: 'Options',
@@ -26,6 +26,7 @@
         title: '${downspeed}, ${upspeed} - ${title}',
         titleRefreshInterval: 5000,
         browserNotification: false,
+        audioNotification: false,
         rpcAlias: '',
         rpcHost: '',
         rpcPort: '6800',
@@ -44,5 +45,10 @@
         displayOrder: 'default:asc',
         fileListDisplayOrder: 'default:asc',
         peerListDisplayOrder: 'default:asc'
+    }).constant('ariaNgDefaultOptionsAudio', {
+        audios:  [
+            { name: 'Disabled', value: false },
+            { name: 'Tuturu', value: 'tuturu_1' }
+        ]
     });
 }());

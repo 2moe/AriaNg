@@ -1,7 +1,8 @@
 (function () {
     'use strict';
 
-    angular.module('ariaNg').factory('ariaNgLocalizationService', ['$translate', 'amMoment', 'ariaNgCommonService', 'ariaNgNotificationService', function ($translate, amMoment, ariaNgCommonService, ariaNgNotificationService) {
+    angular.module('ariaNg').factory('ariaNgLocalizationService', ['$translate', 'amMoment', 'ariaNgCommonService', 'ariaNgNotificationService', 
+      function ($translate, amMoment, ariaNgCommonService, ariaNgNotificationService) {
         return {
             applyLanguage: function (lang) {
                 $translate.use(lang);

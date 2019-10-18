@@ -1,7 +1,8 @@
 (function () {
     'use strict';
 
-    angular.module('ariaNg').controller('Aria2SettingsController', ['$rootScope', '$scope', '$location', 'ariaNgConstants', 'ariaNgLocalizationService', 'aria2SettingService', function ($rootScope, $scope, $location, ariaNgConstants, ariaNgLocalizationService, aria2SettingService) {
+    angular.module('ariaNg').controller('Aria2SettingsController', ['$rootScope', '$scope', '$location', 'ariaNgConstants', 'ariaNgLocalizationService', 'aria2SettingService',
+      function ($rootScope, $scope, $location, ariaNgConstants, ariaNgLocalizationService, aria2SettingService) {
         var location = $location.path().substring($location.path().lastIndexOf('/') + 1);
 
         $scope.context = {

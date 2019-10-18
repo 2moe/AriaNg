@@ -103,6 +103,11 @@ gulp.task('process-assets', ['process-html'], function () {
         .pipe(gulp.dest('dist'));
 });
 
+gulp.task('copy-mp3', function () {
+    gulp.src('src/audio/**/*.mp3')
+        .pipe(gulp.dest('dist/audio'));
+});
+
 gulp.task('process-assets-bundle', ['prepare-fonts', 'prepare-langs', 'prepare-html'], function () {
     return gulp.src('.tmp/index.html')
         .pipe($.replace(/<link rel="stylesheet" href="(css\/[a-zA-Z0-9\-_.]+\.css)">/g, function(match, fileName) {
@@ -195,7 +200,7 @@ gulp.task('info', function () {
     ]).pipe($.size({title: 'build', gzip: true}));
 });
 
-gulp.task('build', $.sequence('lint', 'process-fonts', 'process-langs', 'process-assets', 'process-manifest', 'process-full-extras', 'info'));
+gulp.task('build', $.sequence('lint', 'process-fonts', 'process-langs', 'process-assets', 'process-manifest', 'process-full-extras', 'copy-mp3', 'info'));
 
 gulp.task('build-bundle', $.sequence('lint', 'process-assets-bundle', 'process-tiny-extras', 'info'));
 

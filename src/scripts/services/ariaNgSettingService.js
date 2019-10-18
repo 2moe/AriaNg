@@ -345,6 +345,12 @@
             setBrowserNotification: function (value) {
                 setOption('browserNotification', value);
             },
+            getAudioNotification: function () {
+                return getOption('audioNotification');
+            },
+            setAudioNotification: function (value) {
+                setOption('audioNotification', value);
+            },
             getTitleRefreshInterval: function () {
                 return getOption('titleRefreshInterval');
             },

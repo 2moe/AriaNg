@@ -1,7 +1,8 @@
 (function () {
     'use strict';
 
-    angular.module('ariaNg').controller('AriaNgSettingsController', ['$rootScope', '$scope', '$routeParams', '$window', '$interval', '$timeout', '$filter', 'clipboard', 'ariaNgBuildConfiguration', 'ariaNgLanguages', 'ariaNgCommonService', 'ariaNgNotificationService', 'ariaNgLocalizationService', 'ariaNgLogService', 'ariaNgFileService', 'ariaNgSettingService', 'ariaNgMonitorService', 'ariaNgTitleService', 'aria2SettingService', function ($rootScope, $scope, $routeParams, $window, $interval, $timeout, $filter, clipboard, ariaNgBuildConfiguration, ariaNgLanguages, ariaNgCommonService, ariaNgNotificationService, ariaNgLocalizationService, ariaNgLogService, ariaNgFileService, ariaNgSettingService, ariaNgMonitorService, ariaNgTitleService, aria2SettingService) {
+    angular.module('ariaNg').controller('AriaNgSettingsController', ['$rootScope', '$scope', '$routeParams', '$window', '$interval', '$timeout', '$filter', 'clipboard', 'ariaNgBuildConfiguration', 'ariaNgLanguages', 'ariaNgCommonService', 'ariaNgNotificationService', 'ariaNgLocalizationService', 'ariaNgLogService', 'ariaNgFileService', 'ariaNgSettingService', 'ariaNgMonitorService', 'ariaNgTitleService', 'aria2SettingService', 'ariaNgDefaultOptionsAudio', 
+      function ($rootScope, $scope, $routeParams, $window, $interval, $timeout, $filter, clipboard, ariaNgBuildConfiguration, ariaNgLanguages, ariaNgCommonService, ariaNgNotificationService, ariaNgLocalizationService, ariaNgLogService, ariaNgFileService, ariaNgSettingService, ariaNgMonitorService, ariaNgTitleService, aria2SettingService, ariaNgDefaultOptionsAudio) {
         var extendType = $routeParams.extendType;
         var lastRefreshPageNotification = null;
 
@@ -50,6 +51,7 @@
             titlePreview: getFinalTitle(),
             availableTime: ariaNgCommonService.getTimeOptions([1000, 2000, 3000, 5000, 10000, 30000, 60000], true),
             trueFalseOptions: [{name: 'Enabled', value: true}, {name: 'Disabled', value: false}],
+            audios: ariaNgDefaultOptionsAudio.audios,
             showRpcSecret: false,
             isInsecureProtocolDisabled: ariaNgSettingService.isInsecureProtocolDisabled(),
             settings: ariaNgSettingService.getAllOptions(),
@@ -157,6 +159,10 @@
                     }
                 });
             }
+        };
+
+        $scope.setEnableAudioNotification = function (value) {
+            ariaNgSettingService.setAudioNotification(value);
         };
 
         $scope.setTitleRefreshInterval = function (value) {

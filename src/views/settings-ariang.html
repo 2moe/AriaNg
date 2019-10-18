@@ -83,6 +83,18 @@
                             </select>
                         </div>
                     </div>
+                    <div class="row" ng-if="isSupportNotification()">
+                        <div class="setting-key setting-key-without-desc col-sm-4">
+                            <span translate>Enable Audio Notification</span>
+                        </div>
+                        <div class="setting-value col-sm-8">
+                            <select class="form-control" style="width: 100%;"
+                                    ng-model="context.settings.audioNotification"
+                                    ng-change="setEnableAudioNotification(context.settings.audioNotification)"
+                                    ng-options="option.value as (option.name | translate) for option in context.audios">
+                            </select>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="setting-key setting-key-without-desc col-sm-4">
                             <span translate>Updating Page Title Interval</span>
