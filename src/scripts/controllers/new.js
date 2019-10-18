@@ -1,7 +1,8 @@
 (function () {
     'use strict';
 
-    angular.module('ariaNg').controller('NewTaskController', ['$rootScope', '$scope', '$location', '$timeout', 'ariaNgCommonService', 'ariaNgLocalizationService', 'ariaNgLogService', 'ariaNgFileService', 'ariaNgSettingService', 'aria2TaskService', 'aria2SettingService', function ($rootScope, $scope, $location, $timeout, ariaNgCommonService, ariaNgLocalizationService, ariaNgLogService, ariaNgFileService, ariaNgSettingService, aria2TaskService, aria2SettingService) {
+    angular.module('ariaNg').controller('NewTaskController', ['$rootScope', '$scope', '$location', '$timeout', 'ariaNgCommonService', 'ariaNgLocalizationService', 'ariaNgLogService', 'ariaNgFileService', 'ariaNgSettingService', 'aria2TaskService', 'aria2SettingService', 
+        function ($rootScope, $scope, $location, $timeout, ariaNgCommonService, ariaNgLocalizationService, ariaNgLogService, ariaNgFileService, ariaNgSettingService, aria2TaskService, aria2SettingService) {
         var tabOrders = ['links', 'options'];
         var parameters = $location.search();
 

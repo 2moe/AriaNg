@@ -35,7 +35,7 @@
                     </div>
                 </li>
             </ul>
-
+        
             <div class="tab-content no-padding">
                 <div class="tab-pane" ng-class="{'active': context.currentTab === 'links'}">
                     <div class="new-task-table" ng-if="context.taskType === 'urls'">
@@ -63,6 +63,7 @@
                     </div>
                     <input id="file-holder" type="file" style="display: none"/>
                 </div>
+                
                 <div class="tab-pane" ng-class="{'active': context.currentTab === 'options'}">
                     <div class="settings-table striped hoverable">
                         <div class="settings-table-title new-task-filter-title">
@@ -84,12 +85,18 @@
                                 </div>
                             </div>
                         </div>
-                        <ng-setting ng-repeat="option in context.availableOptions" ng-if="context.optionFilter[option.category]"
-                                    option="option" lazy-save-timeout="0" default-value="context.globalOptions[option.key]"
-                                    on-change-value="setOption(key, value, optionStatus)"></ng-setting>
+                        
+                        <ng-setting ng-repeat="option in context.availableOptions" 
+                          ng-if="context.optionFilter[option.category]" option="option"
+                          default-value="context.globalOptions[option.key]"
+                          on-change-value="setOption(key, value, optionStatus)">
+                        </ng-setting>
+                        
                     </div>
                 </div>
+                 
             </div>
+           
         </div>
     </form>
 </section>

@@ -17,7 +17,9 @@
 .settings-table > div.row {
     padding-top: 8px;
     padding-bottom: 8px;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #111;
+    color: #FFF;
+    background-color: #252c30;
 }
 
 .settings-table > div.row:first-child {
@@ -25,11 +27,18 @@
 }
 
 .settings-table + .settings-table > div.row:first-child {
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #111;
 }
 
 .settings-table .input-group-addon {
-    background-color: #eee;
+    background-color: #f38d09;
+    border: #f38d09;
+    color: #FFF;
+}
+
+.modal-footer {
+    border-top-color: #555;
+    background-color: #333;
 }
 
 .settings-table .asterisk {
@@ -52,7 +61,7 @@
 }
 
 .settings-table em {
-    color: #888;
+    color: #f38d09;
     font-size: 12px;
     font-weight: normal;
 }

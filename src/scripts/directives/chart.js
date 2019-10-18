@@ -10,7 +10,7 @@
             },
             link: function (scope, element, attrs) {
                 var options = {
-                    ngTheme: 'default'
+                    ngTheme: 'dark'
                 };
 
                 angular.extend(options, attrs);
@@ -54,7 +54,7 @@
             },
             link: function (scope, element, attrs) {
                 var options = {
-                    ngTheme: 'default',
+                    ngTheme: 'dark',
                     ngPopoverClass: '',
                     ngContainer: 'body',
                     ngTrigger: 'click',
@@ -105,9 +105,9 @@
                 }, true);
             }
         };
-    }]).factory('chartTheme', ['chartDefaultTheme', function (chartDefaultTheme) {
+    }]).factory('chartTheme', ['chartDarkTheme', function (chartDarkTheme) {
         var themes = {
-            defaultTheme: chartDefaultTheme
+            darkTheme: chartDarkTheme
         };
 
         return {
@@ -115,9 +115,15 @@
                 return themes[name + 'Theme'] ? themes[name + 'Theme'] : {};
             }
         };
-    }]).factory('chartDefaultTheme', function () {
+    }]).factory('chartDarkTheme', function () {
         return {
-            color: ['#74a329', '#3a89e9'],
+            color: ['rgb(104, 238, 51)', '#3a89e9'],
+            backgroundColor: '#111',
+            label: {
+                textStyle: {
+                    color: '#FFF'
+                }
+            },
             legend: {
                 top: 'bottom'
             },
@@ -138,9 +144,6 @@
                     crossStyle: {
                         color: '#008acd',
                         width: 1
-                    },
-                    shadowStyle: {
-                        color: 'rgba(200,200,200,0.2)'
                     }
                 }
             },
@@ -152,27 +155,30 @@
             },
             categoryAxis: {
                 axisLine: {
-                    show: false
+                    show: false,
                 },
                 axisTick: {
                     show: false
                 },
                 splitLine: {
                     lineStyle: {
-                        color: '#f3f3f3'
+                        color: '#f38d09'
                     }
                 }
             },
             valueAxis: {
                 axisLine: {
-                    show: false
+                    show: false,
+                    lineStyle: {
+                        color: '#FFF'
+                    }
                 },
                 axisTick: {
                     show: false
                 },
                 splitLine: {
                     lineStyle: {
-                        color: '#f3f3f3'
+                        color: '#f38d09'
                     }
                 },
                 splitArea: {

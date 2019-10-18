@@ -1,6 +1,7 @@
 /* chart */
 .chart-popover {
     max-width: 320px;
+    background-color: #000;
 }
 
 .chart-popover .popover-content {
@@ -8,9 +9,8 @@
 }
 
 .chart-pop-wrapper {
-    padding-left: 4px;
-    padding-right: 4px;
     overflow-x: hidden;
+    border: 1px solid #f38d09;
 }
 
 .chart-pop {
