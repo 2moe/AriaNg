@@ -1,4 +1,4 @@
-# AriaNg
+# AriaNg (Dark Theme Version)
 [![License](https://img.shields.io/github/license/mayswind/AriaNg.svg?style=flat)](https://github.com/mayswind/AriaNg/blob/master/LICENSE)
 [![Lastest Build](https://img.shields.io/circleci/project/github/mayswind/AriaNg.svg?style=flat)](https://circleci.com/gh/mayswind/AriaNg/tree/master)
 [![Lastest Release](https://img.shields.io/github/release/mayswind/AriaNg.svg?style=flat)](https://github.com/mayswind/AriaNg/releases)
@@ -28,9 +28,9 @@ AriaNg is a modern web frontend making [aria2](https://github.com/aria2/aria2) e
 
 ## Screenshots
 #### Desktop
-![AriaNg](https://raw.githubusercontent.com/mayswind/AriaNg-WebSite/master/screenshots/desktop.png)
-#### Mobile Device
-![AriaNg](https://raw.githubusercontent.com/mayswind/AriaNg-WebSite/master/screenshots/mobile.png)
+![AriaNg](https://raw.githubusercontent.com/BlackMix/AriaNg/master/01.JPG)
+![AriaNg](https://raw.githubusercontent.com/BlackMix/AriaNg/master/03.JPG)
+![AriaNg](https://raw.githubusercontent.com/BlackMix/AriaNg/master/06.JPG)
 
 ## Installation
 AriaNg now provides three versions, standard version, all-in-one version and [AriaNg Native](https://github.com/mayswind/AriaNg-Native). Standard version is suitable for deployment in the web server, and provides resource caching and on-demand loading. All-In-One version is suitable for local using, and you can download it and just open the only html file in browser. [AriaNg Native](https://github.com/mayswind/AriaNg-Native) is also suitable for local using, and is no need for browser. 
