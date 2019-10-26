@@ -560,13 +560,13 @@
                 }, this.ariaNgSettingService.getDownloadTaskRefreshInterval())
             }
 
-            this.$rootScope.loadPromise = this.refreshDownloadTask(false)
-        }
-
-        ngOnDestroy () {
-            if (this.downloadTaskRefreshPromise) {
-                this.$interval.cancel(this.downloadTaskRefreshPromise)
+            this.$onDestroy = () => {
+                if (this.downloadTaskRefreshPromise) {
+                    this.$interval.cancel(this.downloadTaskRefreshPromise)
+                }
             }
+
+            this.$rootScope.loadPromise = this.refreshDownloadTask(false)
         }
 
         getAvailableOptions (status, isBittorrent) {
